@@ -1,10 +1,10 @@
-import { Root } from "postcss";
 import { createBrowserRouter } from "react-router-dom";
 import AddProduct from "../Pages/AddProduct";
 import UpdateProduct from "../Pages/UpdateProduct";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import Home from "../Pages/Home";
+import Root from "./Root";
 const router = createBrowserRouter([
   {
     path: "/",
