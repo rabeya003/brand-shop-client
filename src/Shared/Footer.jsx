@@ -1,30 +1,28 @@
-import { Link } from "react-router-dom";
-
 const Footer = () => {
   return (
     <div>
       <footer className="bg-white border-t-2">
         <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-5xl">
-              Customize Your Tasks
-            </h2>
-
-            <p className="mx-auto mt-4 max-w-sm text-gray-500">
-              With Task Master Services, you&apos;ll be able to customize the
-              tasks you have to create wonderful experiences.
-            </p>
-
-            <Link
-              to="/dashboard"
-              className="mt-8 inline-block rounded-full border px-12 py-3 text-sm font-medium bg-[#B55EEA] text-white hover:bg-[#382147] focus:outline-none focus:ring active:bg-indigo-500"
-            >
-              Get Started
-            </Link>
-          </div>
-
           <div className="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24">
-            <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
+            <form>
+              <header className="footer-title">Contact with us</header>
+              <fieldset className="form-control w-80">
+                <label className="label">
+                  <span className="label-text">Enter your email address</span>
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="username@site.com"
+                    className="input input-bordered md:w-full pr-16"
+                  />
+                  <button className="btn btn-primary absolute top-0 right-12 md:right-0 rounded-l-none">
+                    Subscribe
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+            <ul className="flex flex-wrap justify-center  gap-4 text-xs lg:justify-end">
               <li>
                 <a
                   href="#"
