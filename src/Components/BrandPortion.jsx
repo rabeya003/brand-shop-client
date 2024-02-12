@@ -9,14 +9,14 @@ const BrandPortion = () => {
     axios.get("http://localhost:5000/brand").then((res) => setBrands(res.data));
   }, []);
   return (
-    <div>
+    <div id="brand">
       <h2 className="text-6xl text-center mb-12 mt-32 text-[#20BBD8] font-rancho font-bold">
         Brands
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {brands.map((brand) => (
           <>
-            <Link to={`/brand/:{brand?.brand_name}`}>
+            <Link to={`/brand/${brand?.brand_name}`}>
               <div className="px-12 h-[300px] ">
                 <div className="flex-shrink-0 m-2 relative overflow-hidden rounded-lg max-w-xs shadow-lg">
                   <div className="relative pt-2 px-2 flex items-center justify-center">

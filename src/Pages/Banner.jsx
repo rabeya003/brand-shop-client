@@ -20,7 +20,12 @@ const Banner = () => {
               treasures. From cutting-edge electronics to must-have accessories,
               your next gadget obsession is just a click away.
             </p>
-            <button className="btn btn-[#20BBD8]">Get Started</button>
+            <div className="mt-6">
+              <a href="#brand">
+                {" "}
+                <button className="btn btn-[#20BBD8]">Get Started</button>
+              </a>{" "}
+            </div>
           </div>
         </div>
       </div>
