@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
-  const handleAddCoffee = (e) => {
+  const handleAdd = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -11,7 +11,7 @@ const AddProduct = () => {
     const category = form.category.value;
     const details = form.details.value;
     const img = form.img.value;
-    const newCoffee = { name, brand, price, rating, category, details, img };
+    const newProduct = { name, brand, price, rating, category, details, img };
 
     // Send data to the server
     fetch("http://localhost:5000/tech", {
@@ -19,7 +19,7 @@ const AddProduct = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newCoffee),
+      body: JSON.stringify(newProduct),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -54,7 +54,7 @@ const AddProduct = () => {
         </p>
       </div>
       {/* form */}
-      <form onSubmit={handleAddCoffee}>
+      <form onSubmit={handleAdd}>
         <div>
           {" "}
           <div className="md:flex">
