@@ -6,6 +6,7 @@ import SignUp from "../Pages/SignUp";
 import Home from "../Pages/Home";
 import Root from "./Root";
 import BrandProduct from "../Components/BrandProduct";
+import Details from "../Components/Details";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,12 @@ const router = createBrowserRouter([
       {
         path: "/updateProducts/:id",
         element: <UpdateProduct></UpdateProduct>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/update/${params.id}`),
+      },
+      {
+        path: "/detailsPage/:id",
+        element: <Details></Details>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/update/${params.id}`),
       },
