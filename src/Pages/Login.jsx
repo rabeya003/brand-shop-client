@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -105,9 +106,12 @@ function Login() {
 
           <div className="mt-4 text-sm flex justify-between items-center container-mr">
             <p className="mr-3 md:mr-0">If you don&apos;t have an account..</p>
-            <button className="hover:border register text-white bg-[#002D74] hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300">
-              Register
-            </button>
+            <Link to="/signup">
+              {" "}
+              <button className="hover:border register text-white bg-[#002D74] hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300">
+                Register
+              </button>
+            </Link>
           </div>
         </div>
       </div>
